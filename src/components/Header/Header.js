@@ -156,7 +156,7 @@ const Header = () => {
                             {subItem.hasSubmenu && <KeyboardArrowRightIcon className="submenu-arrow" />}
                           </a>
                           
-                          {/* Third level submenu */}
+                         
                           {subItem.hasSubmenu && hoveredSubItem === subItem.name && (
                             <ul className="submenu">
                               {subItem.submenu.map((submenuItem, submenuIndex) => (
@@ -181,6 +181,7 @@ const Header = () => {
       
       <nav className={`mobile-navigation ${mobileMenuOpen ? 'open' : ''}`}>
         <div className="container">
+          
           <ul className="mobile-nav-menu">
             <li className="mobile-nav-item home-item">
               <a href="/" className="mobile-nav-link">
@@ -205,39 +206,39 @@ const Header = () => {
                 </div>
                 
                 {item.subItems && expandedItems[item.name] && (
-  <ul className="mobile-submenu">
-    {item.subItems.map((subItem, subIndex) => (
-      <li key={subIndex} className="mobile-submenu-item">
-        <div className="mobile-submenu-link-wrapper">
-          <a href={subItem.link} className="mobile-submenu-link">
-            {subItem.name}
-          </a>
-          {subItem.hasSubmenu && (
-            <button 
-              className="expand-btn"
-              onClick={(e) => toggleExpandItem(`${item.name}-${subItem.name}`, e)}
-            >
-              <AddIcon className={expandedItems[`${item.name}-${subItem.name}`] ? 'rotate' : ''} />
-            </button>
-          )}
-        </div>
+                  <ul className="mobile-submenu">
+                    {item.subItems.map((subItem, subIndex) => (
+                      <li key={subIndex} className="mobile-submenu-item">
+                        <div className="mobile-submenu-link-wrapper">
+                          <a href={subItem.link} className="mobile-submenu-link">
+                            {subItem.name}
+                          </a>
+                          {subItem.hasSubmenu && (
+                            <button 
+                              className="expand-btn"
+                              onClick={(e) => toggleExpandItem(`${item.name}-${subItem.name}`, e)}
+                            >
+                              <AddIcon className={expandedItems[`${item.name}-${subItem.name}`] ? 'rotate' : ''} />
+                            </button>
+                          )}
+                        </div>
 
-        {/* Sous-sous-menu */}
-        {subItem.hasSubmenu && expandedItems[`${item.name}-${subItem.name}`] && (
-          <ul className="mobile-subsubmenu">
-            {subItem.submenu.map((submenuItem, submenuIndex) => (
-              <li key={submenuIndex} className="mobile-subsubmenu-item">
-                <a href={submenuItem.link} className="mobile-subsubmenu-link">
-                  {submenuItem.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        )}
-      </li>
-    ))}
-  </ul>
-)}
+                        
+                        {subItem.hasSubmenu && expandedItems[`${item.name}-${subItem.name}`] && (
+                          <ul className="mobile-subsubmenu">
+                            {subItem.submenu.map((submenuItem, submenuIndex) => (
+                              <li key={submenuIndex} className="mobile-subsubmenu-item">
+                                <a href={submenuItem.link} className="mobile-subsubmenu-link">
+                                  {submenuItem.name}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
               </li>
             ))}
