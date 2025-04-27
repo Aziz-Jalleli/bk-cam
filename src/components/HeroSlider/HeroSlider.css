@@ -1,0 +1,176 @@
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 600px; 
+    overflow: hidden;
+  }
+  
+  .slider-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+  }
+  
+  .text-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+  }
+  
+  .text-box h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    color: #000;
+  }
+  
+  .text-box p {
+    font-size: 18px;
+    margin: 0;
+    color: #000;
+  }
+  
+  .overlay-image {
+    max-width: 300px; 
+    max-height: 200px;
+    object-fit: contain;
+  }
+  
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    border-radius: 0;  
+    background: none; 
+    color: white;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  
+  .slider-arrow:hover {
+    opacity: 1;
+  }
+  
+  .slider-arrow.prev {
+    left: 10px;
+  }
+  
+  .slider-arrow.next {
+    right: 10px;
+  }
+  
+  .slider-squares {
+    position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  z-index: 2;
+  gap:5px;
+  }
+  
+  .square {
+    position: relative;
+    width: 40px; 
+    height: 10px; 
+    border: none;
+    padding: 0;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .square.active {
+    background-color: #e30613;
+    border-color: #e30613;
+  }
+  
+  .square {
+    position: relative;
+    width: 40px;
+    height: 10px;
+    border: none;
+    padding: 0;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+ 
+  .square {
+    border-radius: 5px;
+    margin: 0;
+    transition: none;
+  }
+  .slider-progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2); 
+    overflow: hidden;
+    z-index: 3;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #e30613;
+    animation: fillBar 5s linear forwards;
+  }
+  
+  @keyframes fillBar {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  

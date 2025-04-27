@@ -1,0 +1,29 @@
+.side-products {
+    background: transparent;
+    padding: 15px;
+  }
+  .side-products .h3-div{
+    height: 25px;
+    padding-left:20px ;
+    font-size: 13px;
+    margin-left:20px ;
+    text-transform: uppercase;
+    
+    background-color: rgb(233, 229, 229);
+  }
+  
+  
+  .side-product {
+    display: flex;
+    align-items: center;
+    padding-left:20px ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .side-product img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  

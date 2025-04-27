@@ -1,0 +1,42 @@
+
+.category-sidebar {
+    background: transparent;
+    padding: 15px;
+    margin-top:-29px ;
+    font-size: 14px;
+  }
+  .category-sidebar .h3-div{
+    height: 25px;
+    padding-left:20px ;
+    margin-left:20px ;
+    text-transform: uppercase;
+    background-color: rgb(233, 229, 229);
+  }
+  
+  .category-title {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  
+  .subcategory {
+    padding-left: 15px;
+    margin-top: 5px;
+  }
+  
+.category-sidebar li {
+    margin: 5px 0;
+    list-style: none; 
+    position: relative; 
+  }
+  .category-sidebar li::before {
+    content: '>'; 
+    position: absolute;
+    left: -1em; 
+    margin-top: 0.5em;
+  }
+  
+  

@@ -1,0 +1,16 @@
+.homepage {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: white;
+  }
+  
+  .sidebar {
+    width: 250px;
+    flex-shrink: 0;
+  }
+  
+  .main-content {
+    flex: 1;
+  }
+  
